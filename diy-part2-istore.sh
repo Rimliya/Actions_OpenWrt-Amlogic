@@ -73,7 +73,6 @@ rm -rf package/small-package/opkg
 rm -rf package/feeds/packages/aliyundrive-webdav
 rm -rf feeds/packages/multimedia/aliyundrive-webdav
 rm -rf package/feeds/packages/perl-xml-parser
-rm -rf package/feeds/packages/lrzsz
 rm -rf package/feeds/packages/xfsprogs
 # 其他调整
 NAME=$"package/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
@@ -86,7 +85,7 @@ curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.crt -o
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.key -o $NAME/core/server.key
 
 sed -i 's#https://github.com/breakings/OpenWrt#https://github.com/quanjindeng/Actions_OpenWrt-Amlogic#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
-sed -i 's#ARMv8#openwrt_armvirt_v8#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
+sed -i 's#ARMv8#openwrt_armvirt_iStore#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
 sed -i 's#opt/kernel#kernel#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
 
 sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-mount/root/etc/init.d/cifs
